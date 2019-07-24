@@ -28,14 +28,5 @@ class ManageProcessor(object):
             return plugin
         return wrapper
 
-class Color:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[90m'
-    OKGREEN = '\033[92m'
-    OKYELLOW = '\33[93m'
-    WARNING = '\033[91m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-
 
 
