@@ -3,8 +3,8 @@
 
 import sys
 
-from app.main import pentest
-from app.platform import Color
+from pentest import pentest
+
 
 version = "1.3.1"
 banner='''
@@ -16,12 +16,17 @@ __        __   _     _             _        ____
                              |___/ 
       From WeblogicScan V1.2 Fixed by Ra1ndr0op: drops.org.cn | V {} 
 '''.format(version)
-print(Color.OKYELLOW+banner+Color.ENDC)
+print(banner+Color.ENDC)
 print('Welcome To WeblogicScan !!')
 if len(sys.argv)<3:
     print('Usage: python3 WeblogicScan [IP] [PORT]')
 else:
     ip = sys.argv[1]
     port = int(sys.argv[2])
-    pentest(ip,port)
+    cve = pentest(ip,port)
+	if cve:
+		print(cve)
+	else:
+		print(None)
+	
 
