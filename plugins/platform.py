@@ -9,18 +9,18 @@ class ManageProcessor(object):
             for plugin_name in self.PLUGINS.keys():
                 try:
                     cve = self.PLUGINS[plugin_name]().process(ip,port)
-					if cve:
-						return cve
+                    if cve:
+                        return cve
                 except:
-					return None
+                    return None
         else:
             for plugin_name in plugins:
                 try:
                     cve = self.PLUGINS[plugin_name]().process(ip,port)
-					if cve:
-						return cve
+                    if cve:
+                        return cve
                 except:
-					return None
+                    return None
         return
 
     @classmethod

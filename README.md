@@ -1,5 +1,8 @@
 # WeblogicScan
 
+	命令行调用修改为函数调用
+
+
 增强版WeblogicScan 从rabbitmask大佬的WeblogicScan V1.2 版本修改而来。 修改前源项目地址：https://github.com/rabbitmask/WeblogicScan
 
 ![weblogicscan](weblogicscan.png)

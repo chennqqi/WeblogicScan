@@ -12,8 +12,8 @@ url = "http://192.168.3.32:7001/"
 
 @ManageProcessor.plugin_register('weblogic-console')
 class WeblogicCosole(object):
-	def __init__(self, headers = {'user-agent': 'ceshi/0.0.1'}):
-    	
+    def __init__(self, headers = {'user-agent': 'ceshi/0.0.1'}):
+        
     def process(self,ip,port):
         self.run(ip,port)
     def islive(self,ur,port):
@@ -24,6 +24,6 @@ class WeblogicCosole(object):
     def run(self,url,port):
         if self.islive(url,port)==200:
             u='http://' + str(url)+':'+str(port)+'/console/login/LoginForm.jsp'
-			return CVE_RESULT('Weblogic后台路径存在',u)
+            return CVE_RESULT('Weblogic后台路径存在',u)
         else:
-			return None
+            return None

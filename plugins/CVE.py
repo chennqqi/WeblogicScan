@@ -3,7 +3,7 @@
 
 
 class CVE(object):
-	def __init__(self, headers={'user-agent': 'ceshi/0.0.1'}):
+    def __init__(self, headers={'user-agent': 'ceshi/0.0.1'}):
         self.headers = headers
 
     def process(self,ip,port):
@@ -13,9 +13,9 @@ class CVE(object):
         return 500
 
     def run(self,url,port):
-		return None
+        return None
 
 class CVE_RESULT(object):
-	def __init__(cve,url='/'):
-		self.cve = cve
-		sefl.url = url
+    def __init__(cve,url='/'):
+        self.cve = cve
+        sefl.url = url

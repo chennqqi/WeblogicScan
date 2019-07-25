@@ -16,7 +16,7 @@ __        __   _     _             _        ____
                              |___/ 
       From WeblogicScan V1.2 Fixed by Ra1ndr0op: drops.org.cn | V {} 
 '''.format(version)
-print(banner+Color.ENDC)
+print(banner)
 print('Welcome To WeblogicScan !!')
 if len(sys.argv)<3:
     print('Usage: python3 WeblogicScan [IP] [PORT]')
@@ -24,9 +24,9 @@ else:
     ip = sys.argv[1]
     port = int(sys.argv[2])
     cve = pentest(ip,port)
-	if cve:
-		print(cve)
-	else:
-		print(None)
-	
+    if cve:
+        print(cve)
+    else:
+        print(None)
+    
 
